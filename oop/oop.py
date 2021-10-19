@@ -18,3 +18,16 @@ print(type({}))  # <class 'dict'>
 <class 'tuple'>
 <class 'dict'>
 '''
+
+# creating a class:
+
+
+class BigObject:
+    pass
+
+
+# create a new object by instanciating class BigObject:
+obj1 = BigObject()
+obj2 = BigObject()
+
+print(type(obj1))  # <class '__main__.BigObject'>
