@@ -1,4 +1,4 @@
-class User():
+class User(object):  # when creating a class, automatically inherits from object
     def sign_in(self):
         print('logged in')
 
@@ -29,3 +29,11 @@ wizard1.sign_in()
 wizard1.attack()
 
 archer1.attack()
+
+
+# True:
+print(isinstance(wizard1, Wizard))
+print(isinstance(wizard1, User))
+
+# everything in python inherits from the base object class. so everything is an object:
+print(isinstance(wizard1, object))  # True
