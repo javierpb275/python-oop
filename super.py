@@ -35,3 +35,11 @@ archer1 = Archer('paco', 40, 'paco@gmail.com')
 
 print(wizard1.email)
 print(archer1.email)
+
+# introspection: ability to determine the type of an object at runtime
+print(dir(wizard1))  # list out the available methods of wizard1
+
+""" 
+['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__',
+    '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'attack', 'email', 'name', 'power', 'sign_in']
+ """
