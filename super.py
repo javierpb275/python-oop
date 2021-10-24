@@ -1,4 +1,7 @@
 class User():
+    def __init__(self, email):
+        self.email = email
+
     def sign_in(self):
         print('logged in')
 
@@ -7,7 +10,8 @@ class User():
 
 
 class Wizard(User):
-    def __init__(self, name, power):
+    def __init__(self, name, power, email):
+        User.__init__(self, email)
         self.name = name
         self.power = power
 
@@ -17,7 +21,8 @@ class Wizard(User):
 
 
 class Archer(User):
-    def __init__(self, name, arrows):
+    def __init__(self, name, arrows, email):
+        super().__init__(email)
         self.name = name
         self.arrows = arrows
 
@@ -25,5 +30,8 @@ class Archer(User):
         print(f'attack with {self.arrows} arrows')
 
 
-wizard1 = Wizard('pepe', 20)
-archer1 = Archer('paco', 40)
+wizard1 = Wizard('pepe', 20, 'pepe@gmail.com')
+archer1 = Archer('paco', 40, 'paco@gmail.com')
+
+print(wizard1.email)
+print(archer1.email)
