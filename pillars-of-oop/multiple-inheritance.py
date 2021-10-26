@@ -19,3 +19,20 @@ class Archer(User):
 
     def check_arrows(self):
         print(f'{self.arrows} arrows remaining')
+
+    def run(self):
+        print('ran really fast')
+
+
+class HybridBorg(Wizard, Archer):
+    def __init__(self, name, power, arrows):
+        Archer.__init__(self, name, arrows)
+        Wizard.__init__(self, name, power)
+
+
+hb1 = HybridBorg('pepe', 50, 20)
+
+hb1.sign_in()
+hb1.attack()
+hb1.check_arrows()
+hb1.run()
